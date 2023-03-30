@@ -27,8 +27,8 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Header />
         <NavLinks />
-        <SearchBox/>
-        {children}
+        <SearchBox />
+        <div className="max-w-6xl mx-auto pt-4">{children}</div>
       </body>
     </html>
   );
