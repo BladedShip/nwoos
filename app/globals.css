@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    body{
+        @apply bg-[#fcfcfc] text-[#2c2c2c] dark:bg-[#2c2c2c] dark:text-[#fcfcfc];
+    }
+    .navLink{
+        @apply hover:underline decoration-[#dbbadd] text-center decoration-2 active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:font-bold capitalize hover:scale-110 transition-transform duration-200 ease-out; 
+    }
+}
