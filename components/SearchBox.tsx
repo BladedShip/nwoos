@@ -15,6 +15,7 @@ function SearchBox({}: Props) {
     if(!input) return;
 
     router.push(`/search?term=${input}`);
+    setInput("");
   };
 
   return (

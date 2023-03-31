@@ -9,12 +9,11 @@ const poppins = Poppins({
 import NewsList from "@/components/NewsList";
 import { categories } from "@/constants";
 import fetchNews from "@/lib/fetchNews";
-import respose from "../respose.json"
 
 type Props = {};
 
 async function Home({}: Props) {
-  const news: NewsResponse = respose || await fetchNews(categories.join(","));
+  const news: NewsResponse = await fetchNews(categories.join(","));
 
   return (
     <div className={poppins.className}>
@@ -24,3 +23,9 @@ async function Home({}: Props) {
 }
 
 export default Home;
+
+export async function generateStaticProps() {
+  return {
+    category:categories.join(","),
+  };
+}
