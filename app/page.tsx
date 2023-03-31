@@ -23,9 +23,3 @@ async function Home({}: Props) {
 }
 
 export default Home;
-
-export async function generateStaticParams() {
-  return {
-    category:categories.join(","),
-  };
-}
