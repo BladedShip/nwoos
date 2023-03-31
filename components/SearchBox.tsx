@@ -32,7 +32,7 @@ function SearchBox({}: Props) {
       <button
         type="submit"
         disabled={!input}
-        className="text-[#fcfcfc] disabled:text-gray-400"
+        className="text-[#2c2c2c] disabled:text-gray-400 dark:text-[#fcfcfc]"
       >
         Search
       </button>

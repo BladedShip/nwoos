@@ -1,5 +1,6 @@
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import DarkModeButton from "./DarkModeButton";
 
 type Props = {};
 
@@ -16,7 +17,8 @@ function Header({}: Props) {
             , The worst news app
           </h1>
         </Link>
-        <div>
+        <div className="flex items-center space-x-4">
+          <DarkModeButton/>
           <Link
             href="https://adithyan.tech"
             target="_blank"
