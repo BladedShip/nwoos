@@ -7,8 +7,8 @@ type Props = {};
 function Header({}: Props) {
   return (
     <header>
-      <div className="flex justify-between items-center p-8">
-        <Bars3Icon className="h-8 w-8 cursor-pointer" />
+      <div className="grid grid-cols-1 md:grid-cols-3 p-8">
+        <Bars3Icon className="h-8 w-8 cursor-pointer hidden md:inline" />
         <Link href="/" prefetch={false}>
           <h1 className="font-serif text-4xl text-center">
             <span className="decoration-6 underline decoration-[#dbbadd]">
@@ -17,7 +17,7 @@ function Header({}: Props) {
             , The worst news app
           </h1>
         </Link>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 mx-auto md:mx-0 md:ml-auto mt-8 md:mt-0">
           <DarkModeButton/>
           <Link
             href="https://adithyan.tech"

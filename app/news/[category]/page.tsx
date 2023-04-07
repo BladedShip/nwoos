@@ -20,7 +20,7 @@ async function Cateory({ params: { category } }: Props) {
   const news: NewsResponse = await fetchNews(category);
   return (
         <div className={poppins.className}>
-            <h1 className="text-3xl underline decoration-4 decoration-[#dbbadd] font-bold underline-offset-8 capitalize">{category}</h1>
+            <h1 className="text-3xl underline decoration-4 decoration-[#dbbadd] font-bold underline-offset-8 capitalize md:ml-0 ml-8">{category}</h1>
           <NewsList news={news} />
         </div>
   );
