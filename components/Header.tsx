@@ -7,18 +7,18 @@ type Props = {};
 function Header({}: Props) {
   return (
     <header>
-      <div className="flex justify-between items-center p-8">
-        <Bars3Icon className="h-8 w-8 cursor-pointer" />
-        <Link href="/" prefetch={false}>
-          <h1 className="font-serif text-4xl text-center">
-            <span className="decoration-6 underline decoration-[#dbbadd]">
-              Nwoos
-            </span>
-            , The worst news app
-          </h1>
-        </Link>
-        <div className="flex items-center space-x-4">
-          <DarkModeButton/>
+      <div className="grid grid-cols-2 md:grid-cols-3 justify-between items-center p-8">
+        <Bars3Icon className="h-8 w-8 text-[#2c2c2c] hidden md:inline" />
+          <Link href="/" prefetch={false}>
+            <h1 className="font-serif text-4xl text-center">
+              <span className="decoration-6 underline decoration-[#dbbadd]">
+                Nwoos
+              </span>
+              , The worst news app
+            </h1>
+          </Link>
+        <div className="flex items-center space-x-4 justify-end">
+          <DarkModeButton />
           <Link
             href="https://adithyan.tech"
             target="_blank"

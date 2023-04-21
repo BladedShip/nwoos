@@ -20,7 +20,7 @@ function SearchBox({}: Props) {
 
   return (
     <form
-      className="max-w-6xl mx-auto flex justify-between items-center mt-4 px-8"
+      className="max-w-6xl mx-auto flex justify-between items-center mt-4 px-8 space-x-2"
       onSubmit={handleSearch}
     >
       <input
@@ -28,12 +28,12 @@ function SearchBox({}: Props) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Search Keywords.."
-        className="w-full h-14 rounded-sm placeholder-gray-500 text-gray-500 outline-none flex-1 bg-transparent dark:text-[#fcfcfc]"
+        className="w-full h-14 rounded-lg placeholder-gray-500 text-gray-500 outline-none flex-1 bg-transparent dark:text-[#fcfcfc] border-black/10 border p-4"
       />
       <button
         type="submit"
         disabled={!input}
-        className="text-[#2c2c2c] disabled:text-gray-400 dark:text-[#fcfcfc]"
+        className="text-[#fcfcfc] disabled:bg-[#fcfcfc] disabled:text-gray-400 disabled:dark:text-gray-400 disabled:dark:bg-[#2c2c2c]  dark:text-[#2c2c2c] bg-[#dbbadd] h-14 px-4 rounded-xl"
       >
         Search
       </button>
